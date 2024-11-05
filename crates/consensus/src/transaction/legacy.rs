@@ -20,7 +20,6 @@ pub struct TxLegacy {
         serde(
             default,
             with = "alloy_serde::quantity::opt",
-            skip_serializing_if = "Option::is_none",
         )
     )]
     pub chain_id: Option<ChainId>,
